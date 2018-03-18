@@ -50,6 +50,7 @@ namespace detail_range {
 		const value_type step_;
 		const size_type max_count_;
 
+		// calculate the max iteration count
 		size_type get_adjusted_count() const
 		{
 			if (step_ > 0 && begin_ >= end_)
@@ -70,12 +71,14 @@ namespace detail_range {
 			, max_count_(get_adjusted_count())
 		{}
 
+		// to support the new 'for(:)' loop in c++11
 		size_type size() const { return max_count_; }
 		const_iterator begin() const { return { 0, begin_, step_ }; }
 		const_iterator end() const { return { max_count_, end_, step_ }; }
 	};
 }
 
+/// wrapper function to make client call easier.
 template <typename T>
 detail_range::impl<T> range(T end)
 {
@@ -94,6 +97,9 @@ detail_range::impl<T> range(T begin, T end)
 		return { begin, end, -1 };
 }
 
+/// note the usage of decltype(begin+step). This is to allow client to use the 
+/// case like 'range(1, 5, 0.2)'. The 'begin' and 'end' are integer type, but
+/// the step is allowed to be a float number, so the return type should be float as well.
 template <typename T, typename U>
 auto range(T begin, T end, U step)->detail_range::impl<decltype(begin + step)>
 {
