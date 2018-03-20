@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="lazy.h" />
     <ClInclude Include="optional.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />

@@ -35,9 +35,15 @@ public:
 		return IsInit();
 	}
 
-	T const& operator*() const
+	const T & operator*() const
 	{
 		if(IsInit())
+			return *((T*)(&m_data));
+		throw std::logic_error("is not init");
+	}
+	T& operator*()
+	{
+		if (IsInit())
 			return *((T*)(&m_data));
 		throw std::logic_error("is not init");
 	}
