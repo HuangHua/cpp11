@@ -14,3 +14,8 @@ double div(double a, double b)
 {
 	return a / b;
 }
+
+float tolerance()
+{
+	return 1e-6f;
+}
