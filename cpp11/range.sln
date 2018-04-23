@@ -15,6 +15,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dynamiclib", "dynamiclib\dy
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyDll", "MyDll\MyDll.vcxproj", "{B75C130F-2AA8-41D3-8BED-83989C4129B1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DllLoader", "DllLoader", "{B09F8527-FFF9-4A0A-9C8F-DA6A02CF3BBF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "any", "any\any.vcxproj", "{F6D0CF6F-900F-4AD0-BD03-4377391903CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,9 +75,21 @@ Global
 		{B75C130F-2AA8-41D3-8BED-83989C4129B1}.Release|x64.Build.0 = Release|x64
 		{B75C130F-2AA8-41D3-8BED-83989C4129B1}.Release|x86.ActiveCfg = Release|Win32
 		{B75C130F-2AA8-41D3-8BED-83989C4129B1}.Release|x86.Build.0 = Release|Win32
+		{F6D0CF6F-900F-4AD0-BD03-4377391903CC}.Debug|x64.ActiveCfg = Debug|x64
+		{F6D0CF6F-900F-4AD0-BD03-4377391903CC}.Debug|x64.Build.0 = Debug|x64
+		{F6D0CF6F-900F-4AD0-BD03-4377391903CC}.Debug|x86.ActiveCfg = Debug|Win32
+		{F6D0CF6F-900F-4AD0-BD03-4377391903CC}.Debug|x86.Build.0 = Debug|Win32
+		{F6D0CF6F-900F-4AD0-BD03-4377391903CC}.Release|x64.ActiveCfg = Release|x64
+		{F6D0CF6F-900F-4AD0-BD03-4377391903CC}.Release|x64.Build.0 = Release|x64
+		{F6D0CF6F-900F-4AD0-BD03-4377391903CC}.Release|x86.ActiveCfg = Release|Win32
+		{F6D0CF6F-900F-4AD0-BD03-4377391903CC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{87331FA9-D4BA-4E1D-BFB1-19C678E0D9C5} = {B09F8527-FFF9-4A0A-9C8F-DA6A02CF3BBF}
+		{B75C130F-2AA8-41D3-8BED-83989C4129B1} = {B09F8527-FFF9-4A0A-9C8F-DA6A02CF3BBF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EE167B9A-797E-4105-9E6A-77AA606C44F6}
